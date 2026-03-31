@@ -72,8 +72,38 @@ animation:bounce 2s infinite
 50%{transform:translateY(-8px)}
 }
 
+  
 footer{text-align:center;padding:30px;background:#05071d}
+
+/* Premium database architecture image */
+.arch-wrapper{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.arch-img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 30px 70px rgba(0,0,0,.45);
+  transition:all .5s ease;
+}
+
+.arch-img:hover{
+  transform:scale(1.05);
+  box-shadow:0 40px 90px rgba(0,0,0,.6);
+}
+
+.arch-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.05));
+  opacity:.7;
+}
 </style>
+  
 </head>
 <body>
 
@@ -102,7 +132,8 @@ footer{text-align:center;padding:30px;background:#05071d}
 <section>
 <h2 class="title">Core Database Consulting Services</h2>
 <div class="consult-grid">
-
+  
+<!--
 <div class="consult-card">
 <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2070">
 <div class="consult-overlay">
@@ -110,7 +141,18 @@ footer{text-align:center;padding:30px;background:#05071d}
 <p>Future-proof scalable system design</p>
 </div>
 </div>
-
+-->
+<div class="consult-card">
+  <div class="arch-wrapper">
+    <img class="arch-img" src="assets/Database%20Architecture.jpg" alt="Database Architecture">
+    <div class="arch-overlay"></div>
+  </div>
+  <div class="consult-overlay">
+    <h3>Database Architecture</h3>
+    <p>Future-proof scalable system design</p>
+  </div>
+</div>
+  
 <div class="consult-card">
 <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072">
 <div class="consult-overlay">
