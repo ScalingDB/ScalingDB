@@ -461,45 +461,58 @@ footer{text-align:center;padding:30px;background:#05071d}
 .logo-slider {
   width: 100%;
   overflow: hidden;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 .logo-track {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
   animation: scroll 25s linear infinite;
   width: max-content;
 }
 
-/* EACH LOGO */
+/* FIXED SIZE BOX (same as Oracle) */
 .logo-item {
-  flex: 0 0 auto;
-}
+  flex: 0 0 260px;        /* ⭐ VERY IMPORTANT */
+  width: 260px;
+  height: 130px;
 
-/* IMAGE SIZE CONTROL (CRITICAL FIX) */
-.logo-item img {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: 0.3s ease;
 }
 
-.logo-item img:hover {
-  opacity: 1;
-  transform: scale(1.1);
+/* FORCE LOGO SIZE */
+.logo-item img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+
+  transform: scale(1.6);   /* ⭐ KEY FIX */
+  transition: 0.3s ease;
 }
 
-/* SMOOTH SCROLL */
+/* HOVER EFFECT */
+.logo-item:hover {
+  transform: translateY(-6px);
+}
+
+.logo-item:hover img {
+  transform: scale(1.9);
+}
+
+/* SCROLL */
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .logo-track{
   display:flex;
