@@ -1620,14 +1620,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("mobile-menu");
 
-  toggle.addEventListener("click", () => {
+  // Toggle menu
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent immediate close
     menu.classList.toggle("active");
   });
 
-  document.querySelectorAll(".mobile-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("active");
-    });
+  // Prevent clicks inside menu from closing it
+  menu.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // Click anywhere outside → close menu
+  document.addEventListener("click", () => {
+    menu.classList.remove("active");
   });
 });
 </script>
