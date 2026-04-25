@@ -1,13 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ScalingDB – Database Consulting</title>
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <!-- Font Awesome (for WhatsApp icon) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -23,17 +19,10 @@ body{font-family:Poppins;background:#0b0f2a;color:#fff}
 
 .contact-form textarea{
   resize: none;
-}
-
-.contact-form textarea{
-  resize: none;
   min-height: 140px;
   max-height: 140px;
 }
-.contact-form button{
-  display:block;
-  margin:20px auto 0;
-}
+
 /* ================= CONTACT SECTION ================= */
 .contact{
   padding:90px 8%;
@@ -203,6 +192,8 @@ body{font-family:Poppins;background:#0b0f2a;color:#fff}
   border-radius:8px;
   cursor:pointer;
   transition:.3s;
+  display:block;
+  margin:20px auto 0;
 }
 
 .contact-form button:hover{
@@ -476,6 +467,11 @@ footer{text-align:center;padding:30px;background:#05071d}
   opacity:.7;
 }
 
+.intro-header h2 {
+  color: #1D15B0;
+  margin-bottom: 25px;
+  font-size: 40px;
+}
 
 /* ================= MOBILE SERVICES ================= */
 @media (max-width: 768px) {
@@ -615,119 +611,103 @@ footer{text-align:center;padding:30px;background:#05071d}
 }
 
 /* ================= INTRO SECTION ================= */
-.intro{
-  background:#f6f7fb;
-  color:#111;
+.intro {
+  padding: 80px 20px;
+  background: #f8fafc;
 }
 
-.intro-container{
-  display:flex;
-  align-items:center;
-  gap:70px;
+/* CENTER HEADER */
+.intro-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* LEFT IMAGES */
-.intro-images{
-  position:relative;
-  width:50%;
-  min-height:520px;
+.intro-tag {
+  color: #6366F1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 10px;
 }
 
-.intro-images img{
-  position:absolute;
-  border-radius:12px;
-  box-shadow:0 25px 50px rgba(0,0,0,.2);
+
+
+.intro-quote {
+  color: #050647;
+  font-weight: 600;     
+  font-size: 20px;
+  margin: 0 auto 10px;
+  max-width: 900px;
+  line-height: 1.6;
+  text-align: left;
 }
 
-.img1{width:260px; left:0; top:0;}
-.img2{width:280px; left:112px; top:140px;}
-.img3{width:260px; left:0; bottom:0;}
-
-/* RIGHT CONTENT */
-.intro-text{width:50%}
-
-.intro-tag{
-  color:#6c63ff;
-  font-weight:600;
-  letter-spacing:1px;
+.intro-highlight {
+  max-width: 900px;
+  margin: 10px auto 0;   /* 👈 adds space from top */
+  color: #555;
+  line-height: 1.8;
+  font-size: 18px;
+  text-align: left;
 }
 
-.intro h2{
-  font-size:44px;
-  margin:15px 0;
-  color:#1c2540;
+/* GRID */
+.intro-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.intro-quote{
-  color:#555;
-  margin-bottom:15px;
+/* IMAGE */
+.intro-images img {
+  width: 100%;
+  border-radius: 16px;
 }
 
-.intro-highlight{
-  color:#6c63ff;
-  font-weight:600;
-  margin-bottom:30px;
+/* POINTS */
+.point {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.intro-points{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:25px;
+/* 🔥 CLASSY CHECK (this is the upgrade you wanted) */
+.check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.point{
-  display:flex;
-  gap:15px;
-}
-
-.check{
-  background:#1e90ff;
-  color:#fff;
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:14px;
-}
-
-/* Founder */
-.founder{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-top:35px;
-}
-
-.founder img{
-  width:45px;
-  height:45px;
-  border-radius:50%;
+.check::after {
+  content: "✓";
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 /* MOBILE */
-@media(max-width:768px){
-  .intro-container{
-    flex-direction:column;
+@media (max-width: 768px) {
+  .intro-container {
+    grid-template-columns: 1fr;
   }
 
-  .intro-images,
-  .intro-text{
-    width:100%;
-  }
-
-  .intro-images{
-    height:420px;
-  }
-
-  .intro h2{
-    font-size:30px;
-  }
-
-  .intro-points{
-    grid-template-columns:1fr;
-  }
+.intro-header h2 {
+  font-size: 36px;          /* reduce size */
+  font-weight: 700;
+  color: #1e1b4b;           /* match dark blue tone */
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
 }
  
 /* ================= COMPANY OVERVIEW ================= */
@@ -741,6 +721,12 @@ footer{text-align:center;padding:30px;background:#05071d}
 .company h4{
   font-size:20px;
   color:#6c63ff;
+  margin-top: 30px;
+}
+
+h4 {
+  font-size:20px;
+  color: #6c63ff;
   margin-top: 30px;
 }
 
@@ -1256,39 +1242,6 @@ html {
 
     <!-- TECH STACK -->
     <div class="tech-logos">
-<!-- SLIDING TECH STACK -->
-<!--
-
-<div class="logo-slider">
-  <div class="logo-track">
-
-    <div class="logo-item"><img src="assets/AWS.png"></div>
-    <div class="logo-item"><img src="assets/Datadog.png"></div>
-    <div class="logo-item"><img src="assets/Google_cloud.png"></div>
-    <div class="logo-item"><img src="assets/java.png"></div>
-    <div class="logo-item"><img src="assets/Jenkins.png"></div>
-    <div class="logo-item"><img src="assets/Linux.png"></div>
-    <div class="logo-item"><img src="assets/Microsoft.png"></div>
-    <div class="logo-item"><img src="assets/Oracle.png"></div>
-    <div class="logo-item"><img src="assets/PostgreSQL.png"></div>
-
--->
-
-    <!-- duplicate for smooth infinite scroll -->
-<!--
-    <div class="logo-item"><img src="assets/AWS.png"></div>
-    <div class="logo-item"><img src="assets/Datadog.png"></div>
-    <div class="logo-item"><img src="assets/Google_cloud.png"></div>
-    <div class="logo-item"><img src="assets/java.png"></div>
-    <div class="logo-item"><img src="assets/Jenkins.png"></div>
-    <div class="logo-item"><img src="assets/Linux.png"></div>
-    <div class="logo-item"><img src="assets/Microsoft.png"></div>
-    <div class="logo-item"><img src="assets/Oracle.png"></div>
-    <div class="logo-item"><img src="assets/PostgreSQL.png"></div>
-
-  </div>
-</div>
--->
     </div>
 
   </div>-->
@@ -1386,73 +1339,59 @@ html {
 <!-- BLOG -->
 <!-- WHY CHOOSE US / INTRO -->
 <section class="intro">
-  <div class="intro-container">
 
-    <!-- LEFT IMAGES -->
-    <div class="intro-images">
-      <img src="assets/Introducion%20To%20Us.png" class="img1">
-    </div>
+  <!-- CENTERED HEADER -->
+<div class="intro-header">
+  <h2>How We Became Best Among Others?</h2>
+  <p class="intro-highlight">
+We build every partnership on trust, precision, and deep technical expertise tailored to your needs.
+From the start, your success has been the driving force behind everything we do.
+We work as an extension of your team to deliver reliable, high-performance database solutions.
+Our approach ensures your systems stay secure, scalable, and always available.
 
-    <!-- RIGHT CONTENT -->
-    <div class="intro-text">
-      <span class="intro-tag">INTRODUCTION TO US</span>
-      <h2>How We Became Best Among Others ?</h2>
+  </p>
+</div>
 
-      <p class="intro-quote">
-        A journey built on a foundation of trust, precision, and deep technical expertise.
-      </p>
+  <!-- GRID SECTION -->
+<section>
+<div class="consult-grid">
 
-      <p class="intro-highlight">
-        From humble beginnings to becoming a trusted database partner for fast-growing companies,
-        we earned our place through commitment, innovation, and results.
-      </p>
-
-      <div class="intro-points">
-
-        <div class="point">
-          <div class="check">✔</div>
-          <div>
-            <h4>Client-Centric Approach</h4>
-            <p>Every engagement is tailored to your business goals and budget.</p>
-          </div>
-        </div>
-
-        <div class="point">
-          <div class="check">✔</div>
-          <div>
-            <h4>Deep Domain Expertise</h4>
-            <p>From PostgreSQL to AWS RDS, we deliver proven solutions.</p>
-          </div>
-        </div>
-
-        <div class="point">
-          <div class="check">✔</div>
-          <div>
-            <h4>24/7 Reliability</h4>
-            <p>Proactive monitoring ensures your DB stays secure & available.</p>
-          </div>
-        </div>
-
-        <div class="point">
-          <div class="check">✔</div>
-          <div>
-            <h4>Transparent Communication</h4>
-            <p>No jargon. No surprises. Only clear collaboration.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="founder">
-        <img src="https://avatars.githubusercontent.com/u/1?v=4">
-        <div>
-          <b>Arpit Rastogi</b>
-          <span>Founder</span>
-        </div>
-      </div>
-
-    </div>
+<div class="consult-card">
+  <div class="arch-wrapper">
+    <img class="arch-img" src="assets/Client-Centric-%20Approach.png" alt="Client-Centric Approach">
+    <div class="arch-overlay"></div>
   </div>
+  <div class="consult-overlay">
+    <h3>Client-Centric Approach</h3>
+    <p>FEvery engagement is tailored to your business goals and budget.</p>
+  </div>
+</div>
+  
+<div class="consult-card">
+<img src="assets/Domain-Expertise.jpg">
+<div class="consult-overlay">
+<h3>Deep Domain Expertise</h3>
+<p>From PostgreSQL to AWS RDS, we deliver proven solutions.</p>
+</div>
+</div>
+
+<div class="consult-card">
+<img src="assets/Reliability.png">
+<div class="consult-overlay">
+<h3>24/7 Reliability</h3>
+<p>Proactive monitoring ensures your DB stays secure & available.</p>
+</div>
+</div>
+
+<div class="consult-card">
+<img src="assets/communication.png">
+<div class="consult-overlay">
+<h3>24/7 Transparent Communication</h3>
+<p>No jargon. No surprises. Only clear collaboration.</p>
+</div>
+</div>
+
+</div>
 </section>
 
 <div class="blog">
@@ -1486,6 +1425,7 @@ html {
     <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
     <h3>Email Us</h3>
     <p>rastogi.arpit1412@gmail.com</p>
+    <p>rastogi.arpit987@gmail.com</p>
   </div>
 
   <div class="info-card">
@@ -1514,10 +1454,8 @@ html {
   <button type="submit">Send Message</button>
 
 </form>
-</div>  
-
+</div> 
   </div>
-
 </section>
 
 
@@ -1532,9 +1470,6 @@ html {
       form.reset();
     }
   });
-
-
-
 </script>
 </form>
 </section>
@@ -1569,7 +1504,7 @@ html {
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Service</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
       </ul>
     </div>
 
@@ -1633,11 +1568,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-});
-
-
+})
+  
 </script>
-
+  
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("menu-toggle");
@@ -1668,7 +1602,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-
-
 </body>
 </html>
